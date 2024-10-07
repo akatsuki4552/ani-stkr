@@ -9,13 +9,13 @@ jobs:
 
     steps:
     - name: setup python
-      uses: actions/setup-python@v2
+      uses: actions/setup-python@v5
       with:
         python-version: 3.8
     - name: install python requirements
       run: pip install requests
     - name: checkout repo content
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         repository: ${{ secrets.SOURCE_REPO_PATH }}
         token: ${{ secrets.PAT }}
